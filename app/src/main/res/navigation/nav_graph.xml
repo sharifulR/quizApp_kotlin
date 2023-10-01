@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.wbsoft.quiz.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_leadFragment22"
+            app:destination="@id/leadFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/leadFragment2"
+        android:name="com.wbsoft.quiz.LeadFragment"
+        android:label="fragment_lead"
+        tools:layout="@layout/fragment_lead" >
+        <action
+            android:id="@+id/action_leadFragment2_to_profileFragment22"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_leadFragment2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.wbsoft.quiz.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_leadFragment22"
+            app:destination="@id/leadFragment2" />
+        <action
+            android:id="@+id/action_profileFragment2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
